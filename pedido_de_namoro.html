@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido de Namoro</title>
+  <style>
+    body {
+      font-family: 'Segoe Script', cursive;
+      background: url('https://i.imgur.com/UfYO7Ao.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      padding: 30px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #ff69b4;
+    }
+
+    h2 {
+      color: #ffcc00;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 25px;
+      font-size: 1.2em;
+      line-height: 1.8em;
+      text-align: justify;
+    }
+
+    audio {
+      display: block;
+      margin: 10px 0 40px;
+      width: 100%;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      font-size: 1.1em;
+      padding: 10px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #ff69b4;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    #mensagemFinal {
+      margin-top: 20px;
+      font-size: 1.4em;
+      text-align: center;
+      display: none;
+    }
+
+    .foto {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Para você, Julia 💖</h2>
+
+    <img src="IMG-20250724-WA0044.jpg" class="foto" alt="Foto com Julia">
+    <p><strong>Texto 1:</strong><br>
+    Antes de você, eu vivia uma vida sem cor. Uma vida que eu não queria mais continuar. Eu estava cansado, sem esperanças, e quase desisti de tudo. Mas, por algum motivo, o destino me segurou. E hoje eu entendo o porquê... Ele estava guardando você pra mim. Quando você apareceu, foi como se o mundo começasse a fazer sentido. Você trouxe luz, trouxe amor, trouxe vida. Eu agradeço todos os dias por não ter desistido, porque você é a melhor coisa que já me aconteceu.
+    </p>
+    <audio controls>
+      <source src="Lil Peep - Nuts (Lyrics).mp3" type="audio/mp3">
+    </audio>
+
+    <img src="IMG-20250724-WA0046.jpg" class="foto" alt="Foto com Julia">
+    <p><strong>Texto 2:</strong><br>
+    Nosso amor começou do nada. Num dia qualquer, nem trocávamos uma palavra direito. Eu nem imaginava que ali, naquele instante, estava começando a história mais bonita da minha vida. Aos poucos você foi entrando na minha rotina, no meu coração, nos meus planos. Hoje não sei imaginar meus dias sem sua presença, seu carinho, seu jeitinho. Você se tornou meu lar, meu refúgio, meu sonho realizado. E tudo isso começou sem aviso... e se transformou em tudo pra mim.
+    </p>
+    <audio controls>
+      <source src="Barbatuques - Você chegou ｜ (música do filme ＂Rio＂) ｜ Brasil edit.mp3" type="audio/mp3">
+    </audio>
+
+    <img src="IMG-20250717-WA0087.jpg" class="foto" alt="Foto com Julia">
+    <p><strong>Texto 3:</strong><br>
+    Amor, eu posso não ser o homem mais perfeito. Tenho meus erros, minhas falhas, meus dias ruins. Mas por você, eu me esforço todos os dias pra ser alguém melhor. Porque você merece o mundo. E mesmo que eu não consiga te dar tudo, eu prometo te dar o meu melhor. Prometo ser seu apoio, sua paz, sua alegria. Prometo estar do seu lado nos momentos bons e nos difíceis. Eu só quero te fazer feliz, todos os dias, pelo resto da minha vida.
+    </p>
+    <audio controls>
+      <source src="Garota De Ipanema.mp3" type="audio/mp3">
+    </audio>
+
+    <img src="IMG-20250724-WA0045.jpg" class="foto" alt="Foto com Julia sorrindo">
+    <p><strong>Texto 4:</strong><br>
+    Sabe... hoje talvez a gente esteja namorando escondido, disfarçando olhares, vivendo momentos em segredo. Mas meu coração não quer mais esconder. Ele quer gritar pro mundo o quanto ama você. Eu quero estar com você de verdade, viver isso por completo, sem medo. Quero escrever uma história contigo, com capítulos cheios de amor, respeito, risos e sonhos. <br><br>
+    <strong>Julia, amor da minha vida... você aceita namorar comigo? 💍</strong>
+    </p>
+    <audio controls>
+      <source src="IVYSON - Girassol (MixTape Poemas para Quem Chora) [v9jJGXgxNP4] (1).mp3" type="audio/mp3">
+    </audio>
+
+    <div class="buttons">
+      <button onclick="responderSim()">Sim 💍</button>
+      <button id="btnNao" onclick="responderNao()">Não 😢</button>
+    </div>
+
+    <div id="mensagemFinal"></div>
+  </div>
+
+  <script>
+    function responderSim() {
+      document.getElementById("mensagemFinal").style.display = "block";
+      document.getElementById("mensagemFinal").innerText = 
+        "Q bomm q vc aceitou, se não ia ter q raspar sua cabeça 😂 Brincadeira! Te amo ❤️";
+      document.getElementById("btnNao").style.display = "none";
+    }
+
+    function responderNao() {
+      document.getElementById("mensagemFinal").style.display = "block";
+      document.getElementById("mensagemFinal").innerText = 
+        "Poxa... não brinca assim com meu coração 💔";
+      document.getElementById("btnNao").style.display = "none";
+    }
+  </script>
+</body>
+</html>
